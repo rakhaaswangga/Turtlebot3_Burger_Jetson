@@ -19,10 +19,11 @@ Exact node names can vary with ROS launch naming; use `ros2 node list` as the so
 ## 1. Power the Robot and Jetson
 
 1. Confirm the physical connections: OpenCR is connected to Jetson USB and LDS-02 is connected to Jetson USB.
-2. Connect the powerbank and power the TurtleBot3/Jetson using the project’s established hardware procedure.
-3. Wait for the Jetson to finish booting, then log in locally or remotely.
+2. Connect the USB-C output of the powerbank to the PD decoy module.
+3. Confirm the PD decoy is configured to supply **12 V** to the Jetson and OpenCR, then power the system using the established hardware procedure.
+4. Wait for the Jetson to finish booting, then log in locally or remotely.
 
-The powerbank model and power-switch procedure are **TBD**. No separate physical motor-enable procedure has been recorded: in the verified software sequence, the environment is loaded with `source ~/.bashrc` and then bringup is started. Always verify that the robot is safe before commanding movement.
+The verified power chain is **USB-C powerbank → PD decoy (12 V) → Jetson and OpenCR**. The powerbank model and its output-current capability are **TBD**. No separate physical motor-enable procedure has been recorded: in the verified software sequence, the environment is loaded with `source ~/.bashrc` and then bringup is started. Always verify that the robot is safe before commanding movement.
 
 ## 2. Join the Same Network
 

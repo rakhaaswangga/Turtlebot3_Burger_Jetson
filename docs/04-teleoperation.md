@@ -18,7 +18,7 @@ In ROS 2, a **publisher** sends messages to a named **topic**, and a **subscribe
 ```mermaid
 flowchart LR
   Keyboard[Keyboard] --> Teleop[Teleop Node]
-  Teleop -->|publishes geometry_msgs/Twist| Cmd[/cmd_vel topic/]
+  Teleop -->|publishes geometry_msgs/Twist| Cmd["/cmd_vel topic"]
   Cmd -->|subscribed by| Driver[turtlebot3_node]
   Driver -->|USB serial| OpenCR[OpenCR]
   OpenCR --> Motors[Motors]

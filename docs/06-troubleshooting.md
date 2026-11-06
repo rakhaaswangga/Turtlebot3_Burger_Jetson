@@ -112,7 +112,9 @@ If the laptop sees commands but the Jetson does not list `/cmd_vel`, return to t
 
 ## Motor Power Is Not Active
 
-The project confirms that teleoperation has worked. The verified software sequence is `source ~/.bashrc`, `export LDS_MODEL=LDS-02`, and then start bringup. No separate physical motor-enable step has been recorded. If the robot still does not move, check powerbank charge/connection, robot power, OpenCR detection, `/cmd_vel` publication, and the TurtleBot3 driver subscriber before changing configuration.
+The verified power chain is **USB-C powerbank → PD decoy configured for 12 V → Jetson and OpenCR**. The project confirms that teleoperation has worked. The verified software sequence is `source ~/.bashrc`, `export LDS_MODEL=LDS-02`, and then start bringup. No separate physical motor-enable step has been recorded.
+
+If the robot does not move, first check that the powerbank is charged and connected, the PD decoy remains configured for 12 V, and both Jetson and OpenCR are powered. Then check OpenCR detection, `/cmd_vel` publication, and the TurtleBot3 driver subscriber before changing configuration. The powerbank model and available output current are TBD.
 
 ## When to Collect More Information
 

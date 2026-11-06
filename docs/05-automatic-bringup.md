@@ -96,7 +96,7 @@ Run these checks on the Jetson after the service has been enabled or after a reb
 | Starts at boot | `systemctl is-enabled turtlebot3.service` | `enabled` |
 | Current status | `systemctl status turtlebot3.service --no-pager` | `Active: active (running)` |
 | Service log | `journalctl -u turtlebot3.service -b --no-pager` | No recurring launch, OpenCR, or LiDAR connection errors. |
-| Bringup process | `pgrep -af 'turtlebot3|ros2 launch'` | A process associated with the TurtleBot3 launch is present. |
+| Bringup process | `pgrep -af 'turtlebot3\|ros2 launch'` | A process associated with the TurtleBot3 launch is present. |
 
 For ROS graph checks, use a Jetson terminal with the same ROS environment:
 

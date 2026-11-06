@@ -21,7 +21,8 @@ The Jetson Orin Nano is used as the new main computer to replace the Raspberry P
 | Previous computer | Raspberry Pi 3 | Original computer, replaced by Jetson | Verified |
 | Motor controller | OpenCR 1.0 | Receives velocity commands and controls motors | Verified |
 | Range sensor | LDS-02 | Publishes 2D laser scan data | Verified |
-| Robot power | Powerbank | Supplies the system | Model TBD |
+| Robot power | USB-C powerbank | Input source for the robot power chain | Model TBD |
+| Power conversion | PD decoy module | Negotiates/provides the configured 12 V supply to Jetson and OpenCR | Verified |
 | Robot OS | Ubuntu 22.04.5 | Jetson operating system | Verified |
 | Laptop OS | Ubuntu 22.04.5 | Teleoperation workstation OS | Verified |
 | Middleware | ROS 2 Humble | Robot communication framework | Verified |
@@ -33,6 +34,7 @@ The Jetson Orin Nano is used as the new main computer to replace the Raspberry P
 - **LDS-02:** provides laser scan measurements to the ROS 2 graph.
 - **Laptop:** runs the keyboard teleoperation node and ROS 2 inspection tools.
 - **Wi-Fi/hotspot:** carries ROS 2 discovery and topic traffic between laptop and Jetson.
+- **Power chain:** the USB-C powerbank connects to a PD decoy module configured for 12 V. The PD decoy supplies the Jetson and OpenCR. The powerbank model and current capability are TBD.
 
 ## Communication Architecture
 

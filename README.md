@@ -25,6 +25,7 @@ Technical guide and operation manual for a TurtleBot3 Burger migrated from a Ras
 | ROS domain | `30` |
 | TurtleBot model | `burger` |
 | Network | Laptop hotspot (used in testing) or shared Wi-Fi |
+| Power chain | USB-C powerbank → PD decoy set to 12 V → Jetson and OpenCR |
 | Powerbank model | TBD |
 
 ```mermaid
@@ -69,7 +70,7 @@ flowchart TD
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Replace the copyright-holder placeholder in the license file with the appropriate owner before publishing.
+This project is licensed under the [MIT License](LICENSE).
 
 ## Quick Start
 
@@ -86,7 +87,14 @@ On a laptop connected to the same network, use the same ROS domain and run teleo
 ```bash
 source /opt/ros/humble/setup.bash
 export ROS_DOMAIN_ID=30
+export TURTLEBOT3_MODEL=burger
 ros2 run turtlebot3_teleop teleop_keyboard
+```
+
+Ensure that `turtlebot3_teleop` is installed in the laptop ROS 2 environment, or source the local TurtleBot3 workspace before running the command:
+
+```bash
+source ~/turtlebot3_ws/install/setup.bash
 ```
 
 See [System Configuration](docs/02-system-configuration.md) for laptop-hotspot, router, external-hotspot, and SSH communication procedures. See [Running TurtleBot3](docs/03-running-turtlebot3.md) before driving the robot.
