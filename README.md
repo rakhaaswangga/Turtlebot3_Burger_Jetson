@@ -50,6 +50,10 @@ flowchart LR
 4. [Keyboard teleoperation](docs/04-teleoperation.md)
 5. [Troubleshooting](docs/05-troubleshooting.md)
 
+## License
+
+This project is licensed under the [MIT License](LICENSE). Replace the copyright-holder placeholder in the license file with the appropriate owner before publishing.
+
 ## Quick Start
 
 On the Jetson, load the saved ROS environment and start the robot stack:
