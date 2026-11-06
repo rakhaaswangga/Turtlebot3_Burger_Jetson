@@ -35,6 +35,22 @@ flowchart LR
   OpenCR --> Motors[Wheel motors]
 ```
 
+## General System Workflow
+
+This operational flow complements the communication architecture above. It shows the normal sequence from power-on to teleoperation, not the physical communication links.
+
+```mermaid
+flowchart TD
+  Power[1. Power on robot and Jetson] --> Boot[2. Jetson boots and prepares ROS 2 environment]
+  Boot --> Bringup[3. Start TurtleBot3 bringup\nmanual or automatic]
+  Bringup --> Devices[4. Initialize OpenCR and LDS-02]
+  Devices --> ROS[5. ROS 2 nodes and sensors run]
+  ROS --> Network[6. Connect laptop to the same network]
+  Network --> Teleop[7. Laptop teleoperation publishes /cmd_vel]
+  Teleop --> Motion[Robot moves]
+  ROS --> Feedback[8. Robot publishes sensor data and status through ROS 2]
+```
+
 ## Current Achievement
 
 - TurtleBot3 bringup runs on the Jetson.
@@ -48,7 +64,8 @@ flowchart LR
 2. [System configuration](docs/02-system-configuration.md)
 3. [Running TurtleBot3](docs/03-running-turtlebot3.md)
 4. [Keyboard teleoperation](docs/04-teleoperation.md)
-5. [Troubleshooting](docs/05-troubleshooting.md)
+5. [Automatic bringup](docs/05-automatic-bringup.md)
+6. [Troubleshooting](docs/06-troubleshooting.md)
 
 ## License
 

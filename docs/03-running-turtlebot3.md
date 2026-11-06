@@ -98,7 +98,7 @@ ros2 topic echo /odom --once
 
 Expected result: `/scan` returns a `sensor_msgs/msg/LaserScan` message, and `/odom` returns a `nav_msgs/msg/Odometry` message. Odometry may remain stationary until the robot moves; it should still be published.
 
-If either topic is absent, see [Troubleshooting](05-troubleshooting.md) before proceeding to [Teleoperation](04-teleoperation.md).
+If either topic is absent, see [Troubleshooting](06-troubleshooting.md) before proceeding to [Teleoperation](04-teleoperation.md).
 
 ## 8. Stop Bringup Safely
 

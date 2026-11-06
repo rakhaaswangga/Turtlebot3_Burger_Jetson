@@ -170,4 +170,4 @@ The LDS-02 path is currently fixed as `/dev/ttyUSB0` by the verified launch file
 
 ## Configuration Boundary
 
-The following are verified: Ubuntu/ROS versions, domain ID, Burger model, expected USB defaults, laptop hotspot as a communication method, and the Jetson `~/.bashrc` environment. These are still **TBD**: Jetson hostname/username, network SSID/password, powerbank model, USB udev aliases, and the laptop’s persistent ROS setup. See [Troubleshooting](05-troubleshooting.md) when a verification step fails.
+The following are verified: Ubuntu/ROS versions, domain ID, Burger model, expected USB defaults, laptop hotspot as a communication method, and the Jetson `~/.bashrc` environment. These are still **TBD**: Jetson hostname/username, network SSID/password, powerbank model, USB udev aliases, and the laptop’s persistent ROS setup. See [Troubleshooting](06-troubleshooting.md) when a verification step fails.

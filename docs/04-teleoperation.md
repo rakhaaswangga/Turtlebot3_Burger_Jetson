@@ -1,6 +1,6 @@
 # 04. Keyboard Teleoperation
 
-[← Running TurtleBot3](03-running-turtlebot3.md) · [Next: Troubleshooting →](05-troubleshooting.md)
+[← Running TurtleBot3](03-running-turtlebot3.md) · [Next: Automatic Bringup →](05-automatic-bringup.md)
 
 ## Before You Drive
 
@@ -57,7 +57,7 @@ ros2 topic list
 ros2 topic info /cmd_vel -v
 ```
 
-Expected result: `/cmd_vel` appears and its detailed info shows a subscriber from the robot side. If the topic is missing, do not drive; follow [Troubleshooting](05-troubleshooting.md).
+Expected result: `/cmd_vel` appears and its detailed info shows a subscriber from the robot side. If the topic is missing, do not drive; follow [Troubleshooting](06-troubleshooting.md).
 
 ## 3. Start Keyboard Teleoperation
 
@@ -97,4 +97,4 @@ Pressing a movement key should produce `geometry_msgs/msg/Twist` messages. `line
 3. Press `Ctrl+C` to exit the teleop node.
 4. When the demonstration is complete, stop bringup on the Jetson using `Ctrl+C` as described in [Running TurtleBot3](03-running-turtlebot3.md).
 
-If `/cmd_vel` is visible but the robot does not move, check motor power, OpenCR connectivity, and the `/cmd_vel` subscriber in [Troubleshooting](05-troubleshooting.md).
+If `/cmd_vel` is visible but the robot does not move, check motor power, OpenCR connectivity, and the `/cmd_vel` subscriber in [Troubleshooting](06-troubleshooting.md).

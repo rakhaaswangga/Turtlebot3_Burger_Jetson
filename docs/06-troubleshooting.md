@@ -1,6 +1,6 @@
-# 05. Troubleshooting
+# 06. Troubleshooting
 
-[← Teleoperation](04-teleoperation.md) · [Back to README](../README.md)
+[← Automatic Bringup](05-automatic-bringup.md) · [Back to README](../README.md)
 
 Use this guide after checking that the robot is in a safe state. Do not repeatedly send motion commands while hardware connectivity is uncertain.
 
